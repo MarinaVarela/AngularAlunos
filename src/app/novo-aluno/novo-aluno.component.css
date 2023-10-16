@@ -1,0 +1,77 @@
+.listing-description {
+    margin: 10px 0 40px 0;
+}
+
+.listing-heading {
+    font-size: 48pt;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.listing-location {
+    font-size: 24pt;
+    margin-bottom: 15px;
+}
+
+.listing-features>.section-heading {
+    color: var(--secondary-color);
+    font-size: 24pt;
+    margin-bottom: 15px;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+.listing-apply .section-heading {
+    font-size: 18pt;
+    margin-bottom: 15px;
+}
+
+/* Form */
+
+label,
+input {
+    display: block;
+}
+
+label {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12pt;
+
+}
+
+.idade,
+.curso {
+    margin-top: 30px;
+}
+
+input {
+    font-size: 16pt;
+    margin-bottom: 5px;
+    padding: 5px;
+    width: 400px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: solid .3px;
+}
+
+button {
+    margin: 40px 10px 0 0;
+    cursor: pointer;
+}
+
+.voltar {
+    background-color: green;
+    border: green;
+    margin-left: 250px;
+}
+
+.erro-validacao {
+    color: red;
+    font-size: 12px;
+}

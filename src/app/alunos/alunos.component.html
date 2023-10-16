@@ -1,0 +1,6 @@
+<section class="listing" *ngIf="aluno">
+    <h2 class="listing-heading">{{ aluno.nome }}</h2>
+    <p class="listing-id">Identificador: {{ aluno.id }}</p>
+    <p class="listing-data">{{ aluno.idade }}, {{ aluno.curso }}</p>
+    <a [routerLink]="['editar', aluno.id]" routerLinkActive="router-link-active">Editar</a>
+</section>

@@ -1,0 +1,62 @@
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.novo-aluno {
+  margin: 10px 0 10px 25px;
+  text-decoration: none;
+  color: gray;
+}
+
+input[type="text"] {
+  border: solid 1px var(--primary-color);
+  padding: 15px;
+  margin-right: 4px;
+  border-radius: 8px;
+  width: 220px;
+}
+
+.pesquisar {
+  display: flex;
+}
+
+button {
+  padding: 10px;
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.results {
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .results {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 499px) {
+  .results {
+    grid-template-columns: 1fr;
+  }
+}
+
+.not-found {
+  font-size: 25pt;
+  font-weight: bold;
+  margin: 10px 0 0 30px;
+}

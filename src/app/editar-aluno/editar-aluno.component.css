@@ -1,0 +1,70 @@
+.listing-description {
+    margin: 10px 0 40px 0;
+}
+
+.listing-heading {
+    font-size: 48pt;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.listing-location {
+    font-size: 24pt;
+    margin-bottom: 15px;
+}
+
+.listing-features>.section-heading {
+    color: var(--secondary-color);
+    font-size: 24pt;
+    margin-bottom: 15px;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+.listing-apply .section-heading {
+    font-size: 18pt;
+    margin-bottom: 15px;
+}
+/* FORM */
+
+label,
+input {
+    display: block;
+}
+
+label {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12pt;
+}
+
+input {
+    font-size: 16pt;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 400px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: solid .3px;
+}
+
+button {
+    cursor: pointer;
+  }
+  
+.primary{
+   margin-top: 10px;
+}
+.danger {
+    margin-left: 10px;
+    background-color: darkred;
+}
+.voltar {
+    margin-left: 230px;
+    background-color: rgb(14, 207, 63);
+}

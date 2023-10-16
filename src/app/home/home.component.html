@@ -1,0 +1,16 @@
+<header>
+    <a class="novo-aluno" [routerLink]="['novo']">
+        <h3>Cadastro novo aluno</h3>
+    </a>
+
+    <section class="pesquisar">
+        <input type="text" placeholder="Pesquise por nome, idade ou curso" #filter="ngModel" [(ngModel)]="inputFiltro" (input)="filtrarResultado(inputFiltro)">
+        <button class="primary" type="button" (click)="getTodosAlunos()">Limpar filtro</button>
+    </section>
+</header>
+
+<section class="results">
+    <app-alunos *ngFor="let aluno of alunosFiltrados" [aluno]="aluno"></app-alunos>
+    <p *ngIf="alunosFiltrados.length === 0">Aluno não encontrado ou nenhum registro adicionado.</p>
+</section>
+

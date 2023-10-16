@@ -1,0 +1,26 @@
+<article>
+    <section class="listing-description">
+      <h2 class="section-heading">Atualizar cadastro de aluno:</h2>
+    </section>
+  
+    <form #form="ngForm" class="listing-apply" (ngSubmit)="atualizarAluno()" >
+    
+      <label for="nome">Identificador:</label>
+        <input id="id" type="number" [(ngModel)]="alunoInfo.id" readonly name="id">
+
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text" [(ngModel)]="alunoInfo.nome" name="nome" [placeholder]="alunoInfo.nome" >
+  
+        <label for="idade">Idade:</label>
+        <input id="idade" type="number" [(ngModel)]="alunoInfo.idade" name="idade" placeholder="Idade" [placeholder]="alunoInfo.idade">
+  
+        <label for="curso">Curso:</label>
+        <input id="curso" type="text" [(ngModel)]="alunoInfo.curso" name="curso" placeholder="Curso do aluno" [placeholder]="alunoInfo.curso">
+  
+        <button type="submit" class="primary">Salvar</button>
+        <button type="submit" class="primary danger" (click)="deletarAluno(alunoInfo.id)">Deletar</button>
+  
+        <button [routerLink]="['/alunos']" class="primary voltar">Voltar</button>
+    
+    </form>
+  </article>

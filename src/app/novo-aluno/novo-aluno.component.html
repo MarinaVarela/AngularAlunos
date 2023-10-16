@@ -1,0 +1,30 @@
+<article>
+    <section class="listing-description">
+        <h2 class="section-heading">Cadastrar novo aluno:</h2>
+    </section>
+
+    <section class="listing-apply">
+
+        <form #form="ngForm" (ngSubmit)="novoAluno()">
+
+            <label for="nome">Nome:</label>
+            <input id="nome" type="text" [(ngModel)]="novoAlunoRequest.nome" name="nome" #nomeCampo="ngModel" required pattern="^[a-zA-Z\s]*$" placeholder="Nome do aluno">
+            <div *ngIf="nomeCampo.dirty &&  nomeCampo.invalid && nomeCampo.value" class="erro-validacao">O nome deve conter apenas letras*</div>
+            <div *ngIf="nomeCampo.touched && novoAlunoRequest.nome === ''" class="erro-validacao">Campo obrigatório*</div>
+
+            <label class="idade" for="idade">Idade:</label>
+            <input placeholder="Idade" id="idade" type="number" [(ngModel)]="novoAlunoRequest.idade" name="idade" #idadeCampo="ngModel" required pattern="^\d+$" >
+            <div *ngIf="idadeCampo.dirty &&  idadeCampo.invalid && idadeCampo.value" class="erro-validacao">A idade deve ser válida*</div>
+            <div *ngIf="idadeCampo.touched && novoAlunoRequest.idade === 0" class="erro-validacao">Campo obrigatório*</div>
+
+            <label class="curso" for="curso">Curso:</label>
+            <input id="curso" type="text" [(ngModel)]="novoAlunoRequest.curso" name="curso" #cursoCampo="ngModel" placeholder="Curso do aluno">
+            <div *ngIf="cursoCampo.touched && novoAlunoRequest.curso === ''" class="erro-validacao">Campo obrigatório*</div>
+
+            <button type="submit" class="primary">Cadastrar</button>
+            <button type="button" [routerLink]="['/alunos']" class="primary voltar">Voltar</button>
+
+        </form>
+
+    </section>
+</article>
